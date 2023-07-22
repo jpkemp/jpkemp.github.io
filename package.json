@@ -9,8 +9,9 @@
     "build:html": "python build/posthtml.py",
     "build:css": "ncp ./css/ ./docs/css/",
     "build:files": "ncp ./files/ ./docs/files/",
+    "build:img": "ncp ./images/ ./docs/images/",
     "build:js": "",
-    "build": "npm run rmdir -- docs && npm run build:html & npm run build:css & npm run build:js & npm run build:files"
+    "build": "npm run rmdir -- docs && npm run build:html & npm run build:img & npm run build:css & npm run build:js & npm run build:files"
   },
   "dependencies": {
     "ncp": "^2.0.0"
