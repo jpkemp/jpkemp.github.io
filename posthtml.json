@@ -1,0 +1,8 @@
+{
+  "plugins": {
+      "posthtml-modules": {
+          "root": "./html/components/template/",
+          "initial": true
+      }
+  }
+}
