@@ -7,10 +7,10 @@
   "scripts": {
     "rmdir": "node -e \"var fs = require('fs');process.argv.slice(1).map((fpath)=>{ try {fs.rmdirSync(fpath,{recursive: true})} catch(e){console.warn('Error folder:', fpath, e)}});process.exit(0);\"",
     "build:html": "python build/posthtml.py",
-    "build:css": "ncp ./css/ ./public/css/",
-    "build:files": "ncp ./files/ ./public/files/",
+    "build:css": "ncp ./css/ ./docs/css/",
+    "build:files": "ncp ./files/ ./docs/files/",
     "build:js": "",
-    "build": "npm run rmdir -- public && npm run build:html & npm run build:css & npm run build:js & npm run build:files"
+    "build": "npm run rmdir -- docs && npm run build:html & npm run build:css & npm run build:js & npm run build:files"
   },
   "dependencies": {
     "ncp": "^2.0.0"

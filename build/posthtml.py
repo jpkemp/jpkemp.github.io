@@ -3,11 +3,11 @@ import subprocess as sp
 import pathlib
 from pathlib import Path
 
-output_dir = Path('./public/')
+output_dir = Path('./docs/')
 output_dir.mkdir(exist_ok=True)
 input_dir = 'html/pages/'
 for dirpath, _, filenames in walk(input_dir):
-    rel_path = Path('./public/' + dirpath.replace(input_dir, ''))
+    rel_path = Path('./docs/' + dirpath.replace(input_dir, ''))
     rel_path.mkdir(exist_ok=True)
     for filename in filenames:
         input_file = str(Path(dirpath) / filename)
